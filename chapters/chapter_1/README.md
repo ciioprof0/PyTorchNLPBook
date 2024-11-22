@@ -1,11 +1,10 @@
 # Chapter 1
 
-The PyTorch Basics notebook contains many of the examples below, but not all. 
+The PyTorch Basics notebook contains many of the examples below, but not all.
 
 ## In Text Examples
 
-
-- Example 1-1. Generating a “collapsed” one-hot or binary representation using scikitlearn
+- Example 1-1. Generating a “collapsed” one-hot or binary representation using scikit-learn
 - Example 1-2. Generating a TF-IDF representation using scikit-learn
 - Example 1-3. Creating a tensor in PyTorch with torch.Tensor
 - Example 1-4. Creating a randomly initialized tensor
