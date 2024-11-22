@@ -1,13 +1,13 @@
 # Natural Language Processing with PyTorch
-_Build Intelligent Language Applications Using Deep Learning_
-<br>By Delip Rao and Brian McMahan
 
+_Build Intelligent Language Applications Using Deep Learning_
+By Delip Rao and Brian McMahan
 
 Welcome. This is a companion repository for the book [Natural Language Processing with PyTorch: Build Intelligent Language Applications Using Deep Learning](https://www.amazon.com/Natural-Language-Processing-PyTorch-Applications/dp/1491978236/).
 
+## Table of Contents
 
-Table of Contents
-=================
+---
 
 <!--ts-->
 * Get Started!
@@ -26,16 +26,16 @@ Table of Contents
   * Surname Classification with a CNN
 * [Chapter 5: Embedding Words and Types](https://github.com/joosthub/PyTorchNLPBook/tree/master/chapters/chapter_5)
   * Using Pretrained Embeddings
-  * Learning Continous Bag-of-words Embeddings (CBOW)
+  * Learning Continuous Bag-of-words Embeddings (CBOW)
   * Transfer Learning using Pre-trained Embeddings
 * [Chapter 6: Sequence Modeling for NLP](https://github.com/joosthub/PyTorchNLPBook/tree/master/chapters/chapter_6)
   * A sequence representation for Surnames
 * [Chapter 7: Intermediate Sequence Modeling for NLP](https://github.com/joosthub/PyTorchNLPBook/tree/master/chapters/chapter_7)
   * Generating novel surnames from sequence representations
-  * Uncondition generation
+  * Unconditioned generation
   * Conditioned generation
 * [Chapter 8: Advanced Sequence Modeling for NLP](https://github.com/joosthub/PyTorchNLPBook/tree/master/chapters/chapter_8)
-  * Understanding PackedSequences 
+  * Understanding PackedSequences
   * Sequence to Sequence Learning
   * Attention
   * Neural Machine Translation
