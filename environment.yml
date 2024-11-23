@@ -1,0 +1,21 @@
+name: nlpbook
+channels:
+  # - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyterlab
+  - matplotlib
+  - nltk
+  - numpy
+  - pandas
+  - pytorch
+  - requests
+  - scikit-learn
+  - scipy
+  - seaborn
+  - spacy
+  - torchvision
+  - tqdm
+prefix: /home/pro/miniconda/envs/nlpbook
+
