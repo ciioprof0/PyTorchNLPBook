@@ -47,9 +47,9 @@ if [ ! -f $HERE/ag_news/news_with_splits.csv ]; then
 fi
 
 mkdir -p $HERE/nmt
-if [ ! -f $HERE/nmt/eng-fra.txt ]; then 
+if [ ! -f $HERE/nmt/eng-fra.txt ]; then
     $PYTHON download.py 1o2ac0EliUod63sYUdpow_Dh-OqS3hF5Z $HERE/nmt/eng-fra.txt # 292
-fi 
-if [ ! -f $HERE/nmt/simplest_eng_fra.csv ]; then 
+fi
+if [ ! -f $HERE/nmt/simplest_eng_fra.csv ]; then
     $PYTHON download.py 1jLx6dZllBQ3LXZkCjZ4VciMQkZUInU10 $HERE/nmt/simplest_eng_fra.csv # 30
-fi 
+fi
