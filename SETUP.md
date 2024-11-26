@@ -2,69 +2,56 @@
 
 The recommended setup is described below. Modifications to this setup will be called out as appropriate.
 
-## Conda Environment
+## Clone the Repository
 
-It is highly recommended that a conda environment is used to house your PyTorch installation. This has the benefit of insulating against version differences. Alternatives to using conda for installation can be found on [pytorch.org](https://pytorch.org).
+Clone the [repository](https://github.com/ciioprof0/PyTorchNLPBook) from GitHub using one of the options below:
 
-### Create the environment
+- Option A. The web URL:
 
 ```{bash}
-# Create the environment
-conda create --name nlpbook
+git clone https://github.com/ciioprof0/PyTorchNLPBook.git
+```
+
+- Option B. The SSH URL:
+
+```{bash}
+git clone git@github.com:ciioprof0/PyTorchNLPBook.git
+```
+
+- Option C. The GitHub CLI:
+
+```{bash}
+gh repo clone ciioprof0/PyTorchNLPBook
+```
+
+## Create the local environment
+
+Install the Conda Environment
+
+It is highly recommended that a conda environment is used to house your PyTorch installation. This has the benefit of insulating against version differences. See [Installing conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) for instructions on how to install conda pn your system. The [Miniconda](https://docs.anaconda.com/miniconda/) installer is sufficient for this purpose.
+
+Alternatives to using conda for installation can be found on [pytorch.org](https://pytorch.org).
+
+### Create the conda environment
+
+When you have conda installed, you can create an environment with the following command from the project root directory:
+
+Step 1. Create the environment from the `environment.yml` file:
+
+```{bash}
+conda env create -f setup/conda/environment.yml --no-default-packages
+```
+
+Step 2. Activate the environment:
+
+```{bash}
 source activate nlpbook
 ```
 
-### Install PyTorch
+Step 3. Download the data:
 
-Note, this installs the GPU versions as of January, 2019. If this command changes in the future, this README will be updated accordingly. If it is not, please file an issue.
-
-```{bash}
-conda install pytorch torchvision -c pytorch
-```
-
-If you need the CPU versions, want to use `pip install` of conda, or a host of other configuration variations, please consult the website. They have done a great job of making it easy to retrieve the correct install command.
-
-### Download the Repository
-
-You can download the repository from GitHub [delip/PyTorchNLPBook](https://github.com/joosthub/PyTorchNLPBook) using git or downloading the repository as a zip file. You can also use the following commands to clone the repository:
+_Note_. The script below has not yet been updated to download the missing data files. Please see the `data/README.md` for manual installation instructions.
 
 ```{bash}
-git clone git@github.com:joosthub/PyTorchNLPBook.git
-```
-
-Or
-
-```{bash}
-git clone https://github.com/joosthub/PyTorchNLPBook.git
-```
-
-### Install the remaining packages with the requirements file
-
-Inside the repository is a requirements file which can be used to install the remaining packages.
-
-```{bash}
-cd PyTorchNLPBook
-pip install -r requirements.txt
-```
-
-### Installing the jupyter kernel
-
-```{bash}
-python -m ipykernel install --user --name nlpbook
-```
-
-### Download the data
-
-```{bash}
-cd data
-./get-all-data.sh
-```
-
-Note: GloVe is not bundled in our data downloader. See `data/README.md` for more information.
-
-### Run the notebook server
-
-```{bash}
-# run from the top level. if running commands in order, will need to `cd ..`
-jupyter notebook
+bash src/get-all-data.sh
 ```

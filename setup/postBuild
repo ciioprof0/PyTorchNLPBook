@@ -5,10 +5,10 @@ echo "Starting postBuild setup..."
 
 # Run data setup scripts
 echo "Downloading data files..."
-if [ -f "data/get_all_data.sh" ]; then
-    bash data/get_all_data.sh
+if [ -f "src/get_all_data.sh" ]; then
+    bash src/get_all_data.sh
 else
-    echo "Error: data/get_all_data.sh not found!" >&2
+    echo "Error: src/get_all_data.sh not found!" >&2
     exit 1
 fi
 
