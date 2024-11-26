@@ -1,8 +1,34 @@
 #!/bin/bash
+set -e  # Exit on error
 
-# Chapter 2 Examples
+echo "Starting postBuild setup..."
+
+# Run data setup scripts
+echo "Downloading data files..."
+if [ -f "data/get_all_data.sh" ]; then
+    bash data/get_all_data.sh
+else
+    echo "Error: data/get_all_data.sh not found!" >&2
+    exit 1
+fi
+
+# Download GloVe embeddings
+mkdir -p data/glove
+echo "Downloading GloVe embeddings..."
+curl -Lo data/glove/glove.6B.zip https://nlp.stanford.edu/data/glove.6B.zip
+echo "Unzipping GloVe embeddings..."
+unzip -q data/glove/glove.6B.zip -d data/glove/
+rm data/glove/glove.6B.zip
+echo "GloVe embeddings are ready in data/glove/"
+
+# Download NLTK data 'punkt' tokenizer
+echo "Downloading NLTK 'punkt' tokenizer..."
+python -c "import nltk; nltk.download('punkt')"
+python -c "import nltk; nltk.download('punkt_tab')"
+echo "NLTK 'punkt' tokenizer is ready."
+
 # Install spaCy language model
+echo "Installing spaCy language model..."
 python -m spacy download en_core_web_sm
 
-# Chapter 5 Examples
-pip install annoy
+echo "postBuild setup completed successfully!"

@@ -1,14 +1,15 @@
 name: nlpbook
 channels:
-  # - pytorch
   - conda-forge
   - defaults
 dependencies:
+  - python
   - jupyterlab
   - matplotlib
   - nltk
   - numpy
   - pandas
+  - pip
   - pytorch
   - requests
   - scikit-learn
@@ -17,5 +18,6 @@ dependencies:
   - spacy
   - torchvision
   - tqdm
-prefix: /home/pro/miniconda/envs/nlpbook
-
+  - pip:
+    - annoy
+    - -e .

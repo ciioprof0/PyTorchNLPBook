@@ -1,10 +1,15 @@
-tqdm
+annoy
+jupyterlab
 matplotlib
 nltk
-jupyter
-pandas
-seaborn
-scipy
-annoy
 numpy
+pandas
+pytorch
 requests
+scikit-learn
+scipy
+seaborn
+spacy
+torchvision
+tqdm
+-e .
